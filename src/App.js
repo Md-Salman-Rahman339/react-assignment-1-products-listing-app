@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Products from './components/Products';
+import Product from './components/Product';
 
 const products = [
   {
@@ -85,9 +85,13 @@ const products = [
 
 const App = () => {
   return (
-    <div>
+    <div className='app'>
       <h1 className="title">BD Store</h1>
-      <Products  />
+     
+      {products.map((item)=>   <Product key={item.id} image={item.image} titleText={item.title} price={item.price} rating={item.rating} pdesc={item.description} />
+
+    
+    )};
     </div>
   );
 };
